@@ -41,5 +41,6 @@ public class HomeViewModel extends AndroidViewModel {
     {
         return summary;
     }
+
     public MutableLiveData<ArrayList<Advertisement>> getAds(){return ads;}
 }

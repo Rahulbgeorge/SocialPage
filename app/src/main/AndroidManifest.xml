@@ -3,8 +3,8 @@
     package="com.example.rahul.ounceadmin">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -18,37 +18,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".transactionsPage">
-            <intent-filter>
-                <action android:name="com.mcandroid.bmicalculator.BMIResultsScreen" />
 
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".transactionPager2" />
-        <activity
-            android:name=".Social_Media"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_social__media"
-            android:theme="@style/FullscreenTheme" />
-        <activity
-            android:name=".test"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_test"
-            android:theme="@style/FullscreenTheme" />
-        <activity
-            android:name=".FullscreenActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_fullscreen"
-            android:theme="@style/FullscreenTheme" />
-        <activity
-            android:name=".FullscreenActivity2"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_fullscreen2"
-            android:theme="@style/FullscreenTheme" />
+
         <activity
             android:name=".View.Activities.social_page"
             android:label="@string/title_activity_social_page"></activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

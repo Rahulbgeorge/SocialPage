@@ -1,4 +1,4 @@
-package com.example.rahul.ounceadmin.View.Helpers;
+package com.example.rahul.ounceadmin.View.Helpers.NewsListeners;
 
 public interface IScrollDirection {
 

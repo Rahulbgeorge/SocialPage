@@ -17,4 +17,5 @@
 
     <!--Social media-->
     <color name="inactive">#b3afaf</color>
+    <color name="active">#3eabfd</color>
 </resources>

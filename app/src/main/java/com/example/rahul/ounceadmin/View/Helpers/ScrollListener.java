@@ -3,7 +3,7 @@ package com.example.rahul.ounceadmin.View.Helpers;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 
-import com.example.rahul.ounceadmin.View.Helpers.IScrollDirection;
+import com.example.rahul.ounceadmin.View.Helpers.NewsListeners.IScrollDirection;
 
 public class ScrollListener extends RecyclerView.OnScrollListener {
 

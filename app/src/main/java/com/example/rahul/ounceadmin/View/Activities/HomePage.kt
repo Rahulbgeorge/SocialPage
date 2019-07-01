@@ -9,6 +9,9 @@ import android.util.Log
 import android.widget.ScrollView
 import android.widget.Toast
 import com.example.rahul.ounceadmin.*
+import com.example.rahul.ounceadmin.Model.API.APIIntefaces.IGenericResponse
+import com.example.rahul.ounceadmin.Model.API.FetchNewsFeed
+import com.example.rahul.ounceadmin.Model.Social
 import com.example.rahul.ounceadmin.View.Helpers.GlideImageLoadingService
 import com.example.rahul.ounceadmin.View.Helpers.HomeSliderAdapter
 import com.example.rahul.ounceadmin.ViewModel.HomeViewModel
@@ -26,6 +29,15 @@ class HomePage : AppCompatActivity() {
        scrollview.fullScroll(ScrollView.FOCUS_UP)
        viewModel.initScreen()
 
+       FetchNewsFeed(object:IGenericResponse<Social>{
+           override fun success(out: Social?) {
+               Log.e("out","Everything success")
+           }
+
+           override fun fail(description: String?) {
+                Log.e("out","everything failed")
+           }
+       })
        //SUMMARY PAGE DATA AND BUTTONS
        viewModel.summary.observe(this, Observer {
            summary->
