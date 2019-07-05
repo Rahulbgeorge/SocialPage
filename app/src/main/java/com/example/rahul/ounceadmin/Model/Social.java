@@ -7,7 +7,7 @@ import com.example.rahul.ounceadmin.View.Helpers.HolderType;
 public class Social {
 
     public String id,imageUrl,imageBackColor,iconUrl,username,description,shopName;
-    int likeCount,seenCount,commentCount;
+    public int likeCount,seenCount,commentCount;
     public int holderType=HolderType.IMAGE_TYPE;
 
 

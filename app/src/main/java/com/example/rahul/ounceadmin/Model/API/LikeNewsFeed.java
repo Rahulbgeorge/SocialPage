@@ -8,8 +8,10 @@ import com.example.rahul.ounceadmin.Model.InternalTools.Response;
 
 public class LikeNewsFeed implements IHttpResponse {
 
-    public LikeNewsFeed(String token, String id, IGenericResponse<String> respon)
+    IGenericResponse<String> response;
+    public LikeNewsFeed(String token, String id, IGenericResponse<String> response)
     {
+        this.response=response;
         new HttpRequest()
                 .addUrl("news/like/"+id+"/")
                 .addHeader("Authorization","Token 6d3874c0a2125ce600adb4ad93a96f414f92ce26")
@@ -24,8 +26,7 @@ public class LikeNewsFeed implements IHttpResponse {
         }
         else
         {
-            Log.e("Response data","Exception occured");
-            Log.e("Response data",response.getStatusMessage());
+            Log.e("Response data","Exception occured"+response.getStatusCode());
         }
     }
 }

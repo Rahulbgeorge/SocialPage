@@ -55,7 +55,12 @@ public class SocialViewModel extends AndroidViewModel {
                 ArrayList<Social> currentdata=socialData.getValue();
                 currentdata.remove(null);
                 currentdata.addAll(currentdata.size(),out);
-                currentdata.add(null);
+                if(!(restPointer.getNext()==null || restPointer.getNext().equals("null")))
+                {
+                    currentdata.add(null);
+
+
+                }
                 socialData.setValue(currentdata);
             }
 
@@ -73,7 +78,9 @@ public class SocialViewModel extends AndroidViewModel {
     }
 
     public void likeNews(Social social,int position)
-    {new LikeNewsFeed("", social.id, new IGenericResponse<String>() {
+    {
+        Log.e("API Call","Triggered");
+        new LikeNewsFeed("", social.id, new IGenericResponse<String>() {
         @Override
         public void success(String out) {
             Log.e("Like Response",out);

@@ -72,14 +72,14 @@ class social_page : AppCompatActivity()   {
             }).start()
         }
 
-        newsItemListener.setOnCommentButtonListener { social: Social, i: Int ->
-            Log.e("like","Comment clicked")
-            socialViewModel.likeNews(social,i)
-
+        newsItemListener.setOnShopButtonListener{
+            news,position->
+            Toast.makeText(baseContext,"Shop button clicked",Toast.LENGTH_LONG).show()
         }
 
         newsItemListener.setOnLikeClickListener {
             news,position->
+            socialViewModel.likeNews(news,position)
 
             Log.e("like","Button clicked")
 

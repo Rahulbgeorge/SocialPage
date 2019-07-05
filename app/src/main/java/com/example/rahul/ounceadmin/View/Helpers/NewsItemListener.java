@@ -12,6 +12,7 @@ public class NewsItemListener {
     IOldPostListener oldPostListener;
     IClickListener likeButtonListener;
     IClickListener commentButtonListener;
+    IClickListener shopButtonListener;
 
     //------------------------- POST UPDATE LISTENER ------------------------------------------
     public void setOldPostListener(IOldPostListener opr)
@@ -44,5 +45,20 @@ public class NewsItemListener {
                 commentButtonListener.onClick(data,position);
             }
         }).start();}
+
+     //-------------------------- SHOP BUTTON LISTENER  -----------------------------------------
+    public void setOnShopButtonListener(IClickListener obj){shopButtonListener=obj;}
+
+    public void callShopTrigger(final Social data,final int position){
+        if(shopButtonListener!=null)
+        {
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    shopButtonListener.onClick(data,position);
+                }
+            }).start();
+        }
+    }
 
 }
