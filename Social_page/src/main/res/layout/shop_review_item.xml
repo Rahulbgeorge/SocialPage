@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <LinearLayout
+        android:id="@+id/review_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/usericon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            app:srcCompat="@drawable/user_icon_sample" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Rahul B George"
+                android:textColor="@color/fontColor"
+          />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textColor="@color/fontColor"
+                    android:textSize="10sp"/>
+
+                <TextView
+                    android:id="@+id/duration_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10dp"
+                    android:text="weeks ago"
+                    android:textColor="@color/fontColor"
+                    android:layout_marginLeft="5dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/comment_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp">
+
+    <TextView
+        android:id="@+id/comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textSize="15dp"
+        android:textColor="@color/fontColor"
+        android:textStyle="bold"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp">
+
+        <ImageView
+            android:id="@+id/Comment_likeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:tint="@color/inactive"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:srcCompat="@drawable/ic_thumb_up_black_24dp" />
+
+        <TextView
+            android:id="@+id/like_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/fontColor"
+          />
+    </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
